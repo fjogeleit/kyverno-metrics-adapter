@@ -119,7 +119,7 @@ kyverno_policy_changes{policy_validation_mode="enforce", policy_type="cluster", 
       "validationMode": "enforce",
       "backgroundMode": false
     },
-    "ruleName": "rule-abc"
+    "policyChangeType": "create"
   }
 ]
 ```
