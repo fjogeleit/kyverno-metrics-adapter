@@ -3,7 +3,7 @@
 Converts Metrics provided by Kyverno into restful APIs
 
 ```bash
-Run PolicyReporter Watcher & HTTP Metrics Server
+Scrap Metrics and start REST API
 
 Usage:
   kyverno-metrics-adapter run [flags]
