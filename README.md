@@ -75,7 +75,7 @@ http://localhost:3000/policy-rule-count
 
 ```txt
 kyverno_policy_rule_count{policy_validation_mode="enforce", policy_type="cluster", policy_background_mode="false", policy_name="policy-abc", policy_namespace="", rule_name="rule-abc"} 1
-	kyverno_policy_rule_count{policy_validation_mode="enforce", policy_type="cluster", policy_background_mode="false", policy_name="policy-def", policy_namespace="", rule_name="rule-def"} 0
+kyverno_policy_rule_count{policy_validation_mode="enforce", policy_type="cluster", policy_background_mode="false", policy_name="policy-def", policy_namespace="", rule_name="rule-def"} 0
 ```
 
 ### GET API Response
