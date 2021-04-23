@@ -18,11 +18,11 @@ Flags:
 
 ## Available APIs
 
-[Policy Rule Results](https://github.com/fjogeleit/kyverno-metrics-adapter#policy-rule-results)
-[Policy Rule Count](https://github.com/fjogeleit/kyverno-metrics-adapter#policy-rule-count)
-[Policy Changes](https://github.com/fjogeleit/kyverno-metrics-adapter#policy-changes)
-[Policy Rule Exeution Latency](https://github.com/fjogeleit/kyverno-metrics-adapter#policy-rule-exeution-latency)
-[Admission Review Latency](https://github.com/fjogeleit/kyverno-metrics-adapter#admission-review-latency)
+* [Policy Rule Results](https://github.com/fjogeleit/kyverno-metrics-adapter#policy-rule-results)
+* [Policy Rule Count](https://github.com/fjogeleit/kyverno-metrics-adapter#policy-rule-count)
+* [Policy Changes](https://github.com/fjogeleit/kyverno-metrics-adapter#policy-changes)
+* [Policy Rule Exeution Latency](https://github.com/fjogeleit/kyverno-metrics-adapter#policy-rule-exeution-latency)
+* [Admission Review Latency](https://github.com/fjogeleit/kyverno-metrics-adapter#admission-review-latency)
 
 ## Policy Rule Results
 
