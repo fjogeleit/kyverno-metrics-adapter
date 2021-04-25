@@ -21,7 +21,7 @@ type server struct {
 }
 
 func (s *server) registerHandler() {
-	s.mux.HandleFunc("/policy-rule-results", func(w http.ResponseWriter, req *http.Request) {
+	s.mux.HandleFunc("/policy-rule-results", Gzip(func(w http.ResponseWriter, req *http.Request) {
 		if s.development {
 			w.Header().Set("Access-Control-Allow-Origin", "*")
 		}
@@ -40,9 +40,9 @@ func (s *server) registerHandler() {
 			w.WriteHeader(http.StatusInternalServerError)
 			fmt.Fprintf(w, `{ "message": "%s" }`, err.Error())
 		}
-	})
+	}))
 
-	s.mux.HandleFunc("/policy-rule-count", func(w http.ResponseWriter, req *http.Request) {
+	s.mux.HandleFunc("/policy-rule-count", Gzip(func(w http.ResponseWriter, req *http.Request) {
 		if s.development {
 			w.Header().Set("Access-Control-Allow-Origin", "*")
 		}
@@ -61,9 +61,9 @@ func (s *server) registerHandler() {
 			w.WriteHeader(http.StatusInternalServerError)
 			fmt.Fprintf(w, `{ "message": "%s" }`, err.Error())
 		}
-	})
+	}))
 
-	s.mux.HandleFunc("/policy-changes", func(w http.ResponseWriter, req *http.Request) {
+	s.mux.HandleFunc("/policy-changes", Gzip(func(w http.ResponseWriter, req *http.Request) {
 		if s.development {
 			w.Header().Set("Access-Control-Allow-Origin", "*")
 		}
@@ -82,9 +82,9 @@ func (s *server) registerHandler() {
 			w.WriteHeader(http.StatusInternalServerError)
 			fmt.Fprintf(w, `{ "message": "%s" }`, err.Error())
 		}
-	})
+	}))
 
-	s.mux.HandleFunc("/policy-rule-execution-latency", func(w http.ResponseWriter, req *http.Request) {
+	s.mux.HandleFunc("/policy-rule-execution-latency", Gzip(func(w http.ResponseWriter, req *http.Request) {
 		if s.development {
 			w.Header().Set("Access-Control-Allow-Origin", "*")
 		}
@@ -103,9 +103,9 @@ func (s *server) registerHandler() {
 			w.WriteHeader(http.StatusInternalServerError)
 			fmt.Fprintf(w, `{ "message": "%s" }`, err.Error())
 		}
-	})
+	}))
 
-	s.mux.HandleFunc("/admission-review-latency", func(w http.ResponseWriter, req *http.Request) {
+	s.mux.HandleFunc("/admission-review-latency", Gzip(func(w http.ResponseWriter, req *http.Request) {
 		if s.development {
 			w.Header().Set("Access-Control-Allow-Origin", "*")
 		}
@@ -124,7 +124,7 @@ func (s *server) registerHandler() {
 			w.WriteHeader(http.StatusInternalServerError)
 			fmt.Fprintf(w, `{ "message": "%s" }`, err.Error())
 		}
-	})
+	}))
 
 	s.mux.Handle("/metrics", promhttp.Handler())
 }
